@@ -18,15 +18,11 @@
 	<?php echo jset_permission::get_user_attributes_js(); ?>
 </script>
 <script src="js/defaults.js" type="text/javascript"></script>
-<script src="js/patient.js" type="text/javascript"></script>
-<script src="js/dormitory.js" type="text/javascript"></script>
+<script src="js/timesheet_item.js" type="text/javascript"></script>
+<script src="js/job.js" type="text/javascript"></script>
+<script src="js/client.js" type="text/javascript"></script>
 <script src="js/worker.js" type="text/javascript"></script>
-<script src="js/shift_summary.js" type="text/javascript"></script>
-<script src="js/school.js" type="text/javascript"></script>
-<script src="js/welfare_office.js" type="text/javascript"></script>
-<script src="js/medicine.js" type="text/javascript"></script>
 <script src="js/report.js" type="text/javascript"></script>
-<script src="js/session.js" type="text/javascript"></script>
 <script src="js/index.js" type="text/javascript"></script>
 </head>
 <body>
@@ -47,30 +43,25 @@
 			<?php if($user_group == 1){ ?><li><a href="#tabs-2">Jobs</a></li><?php } ?>
 			<?php if($user_group == 1){ ?><li><a href="#tabs-3">Clients</a></li><?php } ?>
 			<?php if($user_group == 1){ ?><li><a href="#tabs-4">Employees</a></li><?php } ?>
-			<?php if($user_group == 1){ ?><li><a href="#tabs-6">Reports</a></li><?php } ?>
+			<?php if($user_group == 1){ ?><li><a href="#tabs-5">Reports</a></li><?php } ?>
 		</ul>
-		<?php if($user_group != 4){ ?>
 		<div id="tabs-1">
-			<table id="patient" border="1"></table>
+			<table id="timesheet_item" border="1"></table>
 		</div>
-		<?php } ?>
+		<?php if($user_group == 1){ ?>
 		<div id="tabs-2">
-			<table id="dormitory" border="1"></table>
+			<table id="job" border="1"></table>
 		</div>
 		<div id="tabs-3">
-			<table id="worker" border="1"></table>
+			<table id="client" border="1"></table>
 		</div>
 		<div id="tabs-4">
-			<table id="shift_summary" border="1"></table>
+			<table id="worker" border="1"></table>
 		</div>
-		<?php if($user_group != 4){ ?>
 		<div id="tabs-5">
-			<table id="school" border="1"></table>
-		</div>
-		<?php } ?>
-		<div id="tabs-6">
 			<table id="report" border="1"></table>
 		</div>
+		<?php } ?>
 	</div>
 </body>
 </html>

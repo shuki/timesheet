@@ -1,13 +1,13 @@
 $.jset.fn.registerGridDefinition('worker', {
   	source: 'worker',
-  	item_name: 'עובד',
+  	item_name: 'Worker',
 	load_edit_record: false,
 	reopen_after_add: true,
 	spacing: '10px',
 	persist:false,
 	template: {
 		use: true,
-		columns: 3
+		columns: 2
 	},
 	filterToolbar:{
 		hide: false,
@@ -66,7 +66,7 @@ $.jset.fn.registerGridDefinition('worker', {
 	},
 	onInitializeForm: function(formid){
 		$(formid).closest('.ui-jqdialog').offset({ top: -1});
-		var button = $('<tr><td><button id="reset_password" class="CaptionField">אפס סיסמה</button></td></tr>');
+		var button = $('<tr><td><button id="reset_password" class="CaptionField">Reset Password (1234)</button></td></tr>');
 		button.appendTo($.jset.fn.get_form_field(formid, 'group').closest('table'))
 		.on('click', function(){
 			var title = 'איפוס סיסמה';
@@ -119,7 +119,7 @@ $.jset.fn.registerGridDefinition('worker', {
 		},
 		add:{
 			checkOnUpdate:true,
-			closeAfterAdd: false
+			closeAfterAdd: true
 		},
 		del:{
 		},

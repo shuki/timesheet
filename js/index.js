@@ -35,46 +35,43 @@ $(function(){
  	});
 	
 	$("#tabs").bind("tabsshow", function(event, ui){
-		var patient = $('table[id="patient"]');
-		var dormitory = $('table[id="dormitory"]');
+		var timesheet_item = $('table[id="timesheet_item"]');
+		var job = $('table[id="job"]');
+		var client = $('table[id="client"]');
 		var worker = $('table[id="worker"]');
-		var shift_summary = $('table[id="shift_summary"]');
-		var school = $('table[id="school"]');
-		var welfare_office = $('table[id="welfare_office"]');
-		var medicine = $('table[id="medicine"]');
 		var report = $('table[id="report"]');
 		//switch(ui.index)
 		switch($(ui.panel).attr('id'))
 		{
 			case 'tabs-1':
-				if(!patient.jset('defined'))
-					patient.jset($.extend(true, {}, $.jset.defaults, $.jset.fn.getGridDefinition('patient')));
+				if(!timesheet_item.jset('defined'))
+					timesheet_item.jset($.extend(true, {}, $.jset.defaults, $.jset.fn.getGridDefinition('timesheet_item')));
 				else
-					if(patient.data('pending_reload'))
-						patient.jset('reload', [true]);
+					if(timesheet_item.data('pending_reload'))
+						timesheet_item.jset('reload', [true]);
 			break;
 			case 'tabs-2':
-				if(!dormitory.jset('defined'))
-					dormitory.jset($.extend(true, {}, $.jset.defaults, $.jset.fn.getGridDefinition('dormitory')));
+				if(!job.jset('defined'))
+					job.jset($.extend(true, {}, $.jset.defaults, $.jset.fn.getGridDefinition('job')));
 				else
-					if(dormitory.data('pending_reload'))
-						dormitory.jset('reload', [true]);
+					if(job.data('pending_reload'))
+						job.jset('reload', [true]);
 			break;
 			case 'tabs-3':
+				if(!client.jset('defined'))
+					client.jset($.extend(true, {}, $.jset.defaults, $.jset.fn.getGridDefinition('client')));
+				else
+					if(client.data('pending_reload'))
+						client.jset('reload', [true]);
+			break;
+			case 'tabs-4':
 				if(!worker.jset('defined'))
 					worker.jset($.extend(true, {}, $.jset.defaults, $.jset.fn.getGridDefinition('worker')));
 				else
 					if(worker.data('pending_reload'))
 						worker.jset('reload', [true]);
 			break;
-			case 'tabs-4':
-				if(!shift_summary.jset('defined'))
-					shift_summary.jset($.extend(true, {}, $.jset.defaults, $.jset.fn.getGridDefinition('shift_summary')));
-				else
-					if(shift_summary.data('pending_reload'))
-						shift_summary.jset('reload', [true]);
-			break;
-			case 'tabs-6':
+			case 'tabs-5':
 				if(!report.jset('defined'))
 					report.jset($.extend(true, {}, $.jset.defaults, $.jset.fn.getGridDefinition('report')));
 			break;

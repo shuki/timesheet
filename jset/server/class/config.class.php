@@ -18,7 +18,7 @@ class config
 	const dbcharset = 'utf8';
 	const dbname = 'timesheet';
 	const dbuser   = 'root';
-	const dbpassword = ''; 
+	const dbpassword = 'earth12'; 
 	
 	const dbfetchStyle = PDO::FETCH_OBJ;
 	const dberrorMode = PDO::ERRMODE_EXCEPTION;

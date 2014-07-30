@@ -12,7 +12,7 @@
 <script src="js/reporting.js" type="text/javascript"></script>
 </head>
 
-<body dir="rtl">
+<body dir="ltr">
 {if $error}
 <div dir="ltr">
 <h3 style="color:red">Error in report</h3>
@@ -40,7 +40,7 @@
 {if $parameters->interactive}
 <tr style="display:none;"><td colspan="2"><input type="text" name="interactive"  value="1" /></td></tr> 
 {/if}
-<tr><td colspan="2"><input type="submit" value="הרץ דוח" /></td></tr>
+<tr><td colspan="2"><input type="submit" value="Run Report" /></td></tr>
 </table>
 </form>	
 <br />

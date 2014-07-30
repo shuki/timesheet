@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2014-07-29 14:04:28
+<?php /* Smarty version Smarty-3.0.8, created on 2014-07-30 23:04:43
          compiled from "tpl/report.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:99014709553cdf34881dea9-32547830%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:3111153d94fdb036d76-04706330%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'd36fdf7cdb68ea5be54058e4096eb17d7cad2ebb' => 
     array (
       0 => 'tpl/report.tpl',
-      1 => 1406629914,
+      1 => 1406750679,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '99014709553cdf34881dea9-32547830',
+  'nocache_hash' => '3111153d94fdb036d76-04706330',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
 )); /*/%%SmartyHeaderCode%%*/?>
-<?php if (!is_callable('smarty_function_html_options')) include 'smarty/libs/plugins/function.html_options.php';
+<?php if (!is_callable('smarty_function_html_options')) include 'smarty/libs/plugins\function.html_options.php';
 ?>﻿
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -33,7 +33,7 @@ $_smarty_tpl->decodeProperties(array (
 <script src="js/reporting.js" type="text/javascript"></script>
 </head>
 
-<body dir="rtl">
+<body dir="ltr">
 <?php if ($_smarty_tpl->getVariable('error')->value){?>
 <div dir="ltr">
 <h3 style="color:red">Error in report</h3>
@@ -76,7 +76,7 @@ if ($_smarty_tpl->_count($_from) > 0){
 <?php if ($_smarty_tpl->getVariable('parameters')->value->interactive){?>
 <tr style="display:none;"><td colspan="2"><input type="text" name="interactive"  value="1" /></td></tr> 
 <?php }?>
-<tr><td colspan="2"><input type="submit" value="הרץ דוח" /></td></tr>
+<tr><td colspan="2"><input type="submit" value="Run Report" /></td></tr>
 </table>
 </form>	
 <br />

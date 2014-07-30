@@ -1,62 +1,36 @@
-$.jset.fn.registerGridDefinition('patient', {
-  	source: 'patient',
-  	item_name: 'חבר/ה',
+$.jset.fn.registerGridDefinition('timesheet_item', {
+  	source: 'timesheet_item',
+  	item_name: 'Timesheet Entry',
 	load_edit_record: false,
-	reopen_after_add: true,
+	reopen_after_add: false,
 	spacing: '10px',
 	persist:false,
 	template: {
 		use: true,
-		columns: 3
+		columns: 1
 	},
 	filterToolbar:{
 		hide: false,
 		navButtonAdd: false,
-	},
-	copy:{
-		properties: {
-			editCaption: 'העתק'
-		},
-		options: {
-			title: 'העתק'
-		}
 	},
 	help:{
 		hide: false,
 		navButtonAdd: true,
 		dialog: {
 			autoOpen: false,
-			title: 'הסבר',
+			title: 'Help',
 			width: 600,
 			position: 'top'
 		},
 		options: {
 			caption:'',
-			title:'הסבר', 
+			title:'Help', 
 			buttonicon :'ui-icon-lightbulb', 
 			position: 'last'
 		}
 	},
 	columnChooser:{
 		navButtonAdd: true,
-		multiselect:{
-		    locale: {
-		        addAll: 'הצג את כל העמודות',
-		        removeAll: 'הסתר את כל העמודות',
-		        itemsCount: 'עמודות מוצגות'
-		    }
-		},
-		col:{
-		    width: 420,
-		    modal: true,
-		    msel_opts: {dividerLocation: 0.5},
-		    dialog_opts: {
-		        minWidth: 470,
-		        minHeight: 370,
-		        show: 'blind',
-		        hide: 'explode'
-		    }
-		}
 	},
 	clearPersist: {
 		navButtonAdd: true,
@@ -76,21 +50,16 @@ $.jset.fn.registerGridDefinition('patient', {
 	onInitializeForm: function(formid){
 		var grid = $(this);
 		$(formid).closest('.ui-jqdialog').offset({ top: -1});
-		/*$.jset.fn.append_fields(formid, 'birth_date', 1);
-		if($.jset.fn.get_column(grid, 'dormitory').hidden != 1 || $.jset.fn.get_column(grid, 'dormitory').edithidden == 1)
-			$.jset.fn.append_fields(formid, 'dormitory', 1);
-		
-		$.jset.fn.get_form_field(formid, 'age').css('width', '16px');
-		$.jset.fn.get_form_field(formid, 'birth_date').on('change.patient', function(){
-			$.jset.fn.get_form_field(formid, 'age').val('');
-		});*/
 	},
 	afterSubmit: function(response, postdata){
 		return [true];
 	},
     grid: {
-	    sortname: 'first_name',
-	    sortorder: 'asc',
+	    sortname: 'date',
+	    sortorder: 'desc',
+		footerrow : true,
+		userDataOnFooter : true,
+		height: $(window).height() - 155
   	},
   	navigation:{
 		options : {
@@ -101,7 +70,7 @@ $.jset.fn.registerGridDefinition('patient', {
 		edit:{
 		},
 		add:{
-			closeAfterAdd: false
+			closeAfterAdd: true
 		},
 		del:{
 		},
