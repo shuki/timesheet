@@ -59,7 +59,7 @@ $.jset.fn.registerGridDefinition('timesheet_item', {
 	    sortorder: 'desc',
 		footerrow : true,
 		userDataOnFooter : true,
-		height: $(window).height() - 155
+		height: $(window).height() - 165
   	},
   	navigation:{
 		options : {
