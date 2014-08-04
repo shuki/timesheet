@@ -19,7 +19,7 @@
 </script>
 <script src="js/defaults.js" type="text/javascript"></script>
 <script src="js/add.js" type="text/javascript"></script>
-<meta name="viewport" content="width=500, initial-scale=1">
+<meta name="viewport" content="width=300, initial-scale=1">
 </head>
 <body>
 	<div style="float:right; margin:0 20px 0 0;">
