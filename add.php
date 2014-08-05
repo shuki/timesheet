@@ -20,11 +20,12 @@
 <script src="js/defaults.js" type="text/javascript"></script>
 <script src="js/add.js" type="text/javascript"></script>
 <!--meta name="viewport" content="width=300, initial-scale=1"-->
-<meta name="viewport" content="width=device-width/" ></head>
+<meta name="viewport" content="width=device-width/" >
+</head>
 <body>
-	<div style="float:right; margin:0 20px 0 0;">
+	<!--div style="float:right; margin:0 20px 0 0;">
 		Hi <a href="<?php echo config::password_page; ?>"><?php echo $_SESSION['jset_user_login']; ?></a> <a href="login.php?signout"><img src="<?php echo $dir_pre ?>jset/img/out.png" title="Log out"></a>
-	</div>
+	</div-->
 	<br />
 	<?php if(!$user_group){ ?>		
 		<div style="direction:rtl; text-align:right">  Please define the permission group for the user <?php echo $_SESSION['jset_user_login']; ?> to enable the use of the system. </div>

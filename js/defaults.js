@@ -54,5 +54,9 @@ $(function(){
 			}
 		}
 	});
+
+	$.extend($.validator.messages, {
+	 	required: 'Required'
+	});
 });
 

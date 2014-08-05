@@ -26,6 +26,7 @@ jset_page::min(config::jxset, $language, '', $rtl);
 <script src="<?php echo $dir_pre ?>jset/i18n/jset.locale-he.js" type="text/javascript"></script>
 <title><?php echo $lang['title'] ?></title>
 <script src="js/password.js" type="text/javascript"></script>
+<meta name="viewport" content="width=device-width/" >
 </head>
 <body>
 	<div id="headstrip"> <span class="headstrip" ><a href="<?php echo (!$_SERVER['HTTP_REFERER'] || strstr($_SERVER['HTTP_REFERER'], config::password_page)) ? config::start_page :  $_SERVER['HTTP_REFERER']; ?>"><?php echo $lang['back'] ?></a></span><?php echo $lang['hi'] ?> <?php echo $_SESSION['jset_user_login']; ?> <a href="login.php?signout"><img src="<?php echo $dir_pre ?>jset/img/out.png" title="<?php echo $lang['logout'] ?>"></a></div>
