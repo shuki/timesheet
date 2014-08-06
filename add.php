@@ -23,15 +23,6 @@
 <meta name="viewport" content="width=device-width/" >
 </head>
 <body>
-	<!--div style="float:right; margin:0 20px 0 0;">
-		Hi <a href="<?php echo config::password_page; ?>"><?php echo $_SESSION['jset_user_login']; ?></a> <a href="login.php?signout"><img src="<?php echo $dir_pre ?>jset/img/out.png" title="Log out"></a>
-	</div-->
-	<br />
-	<?php if(!$user_group){ ?>		
-		<div style="direction:rtl; text-align:right">  Please define the permission group for the user <?php echo $_SESSION['jset_user_login']; ?> to enable the use of the system. </div>
-	<?php 
-		die;
-	} ?>
 	<div id="add" style="display:none;">
 		<table id="add_timesheet" border="1"></table>
 	</div>
