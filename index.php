@@ -29,7 +29,7 @@
 </head>
 <body>
 	<div style="float:right; margin:0 20px 0 0;">
-		Hi <a href="<?php echo config::password_page; ?>"><?php echo $_SESSION['jset_user_login']; ?></a> <a href="login.php?signout"><img src="<?php echo $dir_pre ?>jset/img/out.png" title="Log out"></a>
+		Hi <a href="<?php echo config::password_page; ?>"><?php echo $_SESSION['jset_user_login']; ?></a> <a href="login.php?signout"><img src="<?php echo $dir_pre ?>jset/img/logout-icon.png" style="width:16px;" title="<?php echo $lang['logout'] ?>"></a>
 	</div>
 	<br />
 	<?php if(!$user_group){ ?>

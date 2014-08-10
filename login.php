@@ -35,7 +35,7 @@ jset_page::min(config::jxset, $language, '', $rtl);
 <meta name="viewport" content="width=device-width/" >
 </head>
 <body>
-	<div style="width:200px; height:150px; margin-top:10px">
+	<div style="width:100%; margin-top:10px">
 		<div style="width:20%; margin: 0 auto;">
 			<form action="<?php echo config::login_page; ?>" method="post" target="_self"> 
 				<table>
