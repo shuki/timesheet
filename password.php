@@ -29,7 +29,7 @@ jset_page::min(config::jxset, $language, '', $rtl);
 <meta name="viewport" content="width=device-width/" >
 </head>
 <body>
-	<div id="headstrip"> <span class="headstrip" ><a href="<?php echo (!$_SERVER['HTTP_REFERER'] || strstr($_SERVER['HTTP_REFERER'], config::password_page)) ? config::start_page :  $_SERVER['HTTP_REFERER']; ?>"><?php echo $lang['back'] ?></a></span><?php echo $lang['hi'] ?> <?php echo $_SESSION['jset_user_login']; ?> <a href="login.php?signout"><img src="<?php echo $dir_pre ?>jset/img/logout-icon.png" style="width:16px;" title="<?php echo $lang['logout'] ?>"></a></div>
+	<div id="headstrip"><span style="display:inline-block;"></span><span class="headstrip" ><a href="<?php echo (!$_SERVER['HTTP_REFERER'] || strstr($_SERVER['HTTP_REFERER'], config::password_page)) ? config::start_page :  $_SERVER['HTTP_REFERER']; ?>"><?php echo $lang['back'] ?></a></span><?php echo $lang['hi'] ?> <?php echo $_SESSION['jset_user_login']; ?> <a href="login.php?signout"><img src="<?php echo $dir_pre ?>jset/img/logout-icon.png" style="width:16px;" title="<?php echo $lang['logout'] ?>"></a></span></div>
 	<br />
 	<div style="width:100%; margin-top:10px">	
 		<div style="width:30%; margin: 0 auto;">
