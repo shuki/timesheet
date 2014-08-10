@@ -9,7 +9,8 @@
  include_once("autoload.php");
  $dir_pre = config::jxset;
  jset_session::create();
- jset_page::create(config::jxset, 'en', '', false, 'ui-lightness');
+ //jset_page::create(config::jxset, 'en', '', false, 'ui-lightness');
+ jset_page::create(config::jxset, 'en', '', false, 'redmond');
  $user_group = $_SESSION['jset_user_group'];
 ?>
 <link rel="stylesheet" type="text/css" media="screen" href="css/index.css" />
