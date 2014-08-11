@@ -19,8 +19,6 @@
 </script>
 <script src="js/defaults.js" type="text/javascript"></script>
 <script src="js/add.js" type="text/javascript"></script>
-<!--meta name="viewport" content="width=300, initial-scale=1"-->
-<meta name="viewport" content="width=device-width/" >
 </head>
 <body>
 	<div id="add" style="display:none;">

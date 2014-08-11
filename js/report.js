@@ -15,7 +15,7 @@ $.jset.fn.registerGridDefinition('report', {
 	beforeRequest: function(){
 	},
     grid: {
-    	width:500
+    	//width:500
   	},
   	navigation:{
 		options : {
