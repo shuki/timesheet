@@ -26,7 +26,7 @@
 <script src="js/report.js" type="text/javascript"></script>
 <script src="js/index.js" type="text/javascript"></script>
 <!--meta name="viewport" content="width=device-width/" -->
-<meta name="viewport" content="width=device-width, initial-scale=1"></head>
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1"></head>
 </head>
 <body>
 	<div style="float:right; margin:0 20px 0 0;">
