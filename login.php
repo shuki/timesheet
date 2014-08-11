@@ -32,7 +32,8 @@ jset_page::min(config::jxset, $language, '', $rtl);
 <script src="<?php echo $dir_pre ?>jset/i18n/jset.locale-he.js" type="text/javascript"></script>
 <title><?php echo $lang['title'] ?></title>
 <script src="js/login.js" type="text/javascript"></script>
-<meta name="viewport" content="width=device-width/" >
+<!--meta name="viewport" content="width=device-width/" -->
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 </head>
 <body>
 	<div style="width:100%; margin-top:10px">
