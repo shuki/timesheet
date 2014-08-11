@@ -25,8 +25,8 @@
 <script src="js/worker.js" type="text/javascript"></script>
 <script src="js/report.js" type="text/javascript"></script>
 <script src="js/index.js" type="text/javascript"></script>
-<meta name="viewport" content="width=device-width/">
-</head>
+<!--meta name="viewport" content="width=device-width/"-->
+<meta name="viewport" content="width=device-width, initial-scale=1"></head>
 <body>
 	<div style="float:right; margin:0 20px 0 0;">
 		Hi <a href="<?php echo config::password_page; ?>"><?php echo $_SESSION['jset_user_login']; ?></a> <a href="login.php?signout"><img src="<?php echo $dir_pre ?>jset/img/logout-icon.png" style="width:16px;" title="<?php echo $lang['logout'] ?>"></a>
