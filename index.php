@@ -25,8 +25,9 @@
 <script src="js/worker.js" type="text/javascript"></script>
 <script src="js/report.js" type="text/javascript"></script>
 <script src="js/index.js" type="text/javascript"></script>
-<!--meta name="viewport" content="width=device-width/"-->
+<!--meta name="viewport" content="width=device-width/" -->
 <meta name="viewport" content="width=device-width, initial-scale=1"></head>
+</head>
 <body>
 	<div style="float:right; margin:0 20px 0 0;">
 		Hi <a href="<?php echo config::password_page; ?>"><?php echo $_SESSION['jset_user_login']; ?></a> <a href="login.php?signout"><img src="<?php echo $dir_pre ?>jset/img/logout-icon.png" style="width:16px;" title="<?php echo $lang['logout'] ?>"></a>
@@ -39,7 +40,7 @@
 	<?php 
 		die;
 	}	?>
-	<div id="tabs" style="max-width:500px;">
+	<div id="tabs">
 		<ul>
 			<li><a href="#tabs-1">Timesheets</a></li>
 			<?php if($user_group == 1){ ?><li><a href="#tabs-2">Jobs</a></li><?php } ?>
