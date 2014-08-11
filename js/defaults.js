@@ -30,8 +30,10 @@ $(function(){
 		},
 	    grid: {
 	    	direction: 'ltr',
-		    width: $(window).width() - 24,
-		    height: $(window).height() - 133,
+		    //width: $(window).width() - 24,
+		    width: 500,
+		    //height: $(window).height() - 133,
+		    height: 200,
 			rownumWidth: 30
 	  	},
 	  	navigation:{

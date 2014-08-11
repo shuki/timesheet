@@ -39,7 +39,7 @@
 	<?php 
 		die;
 	}	?>
-	<div id="tabs">
+	<div id="tabs" style="max-width:500px;">
 		<ul>
 			<li><a href="#tabs-1">Timesheets</a></li>
 			<?php if($user_group == 1){ ?><li><a href="#tabs-2">Jobs</a></li><?php } ?>
