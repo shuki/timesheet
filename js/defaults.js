@@ -34,7 +34,7 @@ $(function(){
 		    width: 500,
 		    //height: $(window).height() - 133,
 		    height: 200,
-			rownumWidth: 30
+			rownumWidth: 30,
 	  	},
 	  	navigation:{
 			options : {
