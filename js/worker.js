@@ -1,6 +1,6 @@
 $.jset.fn.registerGridDefinition('worker', {
   	source: 'worker',
-  	item_name: 'Worker',
+  	item_name: 'Employee',
 	load_edit_record: false,
 	reopen_after_add: true,
 	spacing: '10px',
@@ -13,64 +13,20 @@ $.jset.fn.registerGridDefinition('worker', {
 		hide: false,
 		navButtonAdd: false,
 	},
-	copy:{
-		properties: {
-			editCaption: 'העתק'
-		},
-		options: {
-			title: 'העתק'
-		}
-	},
 	help:{
 		hide: false,
 		navButtonAdd: true,
-		dialog: {
-			autoOpen: false,
-			title: 'הסבר',
-			width: 600,
-			position: 'top'
-		},
-		options: {
-			caption:'',
-			title:'הסבר', 
-			buttonicon :'ui-icon-lightbulb', 
-			position: 'last'
-		}
 	},
 	columnChooser:{
 		navButtonAdd: true,
-		options: {
-			caption: '',
-			title: 'בחר עמודות',
-			buttonicon: 'ui-icon-calculator',
-			position: 'last'
-		},
-		multiselect:{
-		    locale: {
-		        addAll: 'הצג את כל העמודות',
-		        removeAll: 'הסתר את כל העמודות',
-		        itemsCount: 'עמודות מוצגות'
-		    }
-		},
-		col:{
-		    width: 420,
-		    modal: true,
-		    msel_opts: {dividerLocation: 0.5},
-		    dialog_opts: {
-		        minWidth: 470,
-		        minHeight: 370,
-		        show: 'blind',
-		        hide: 'explode'
-		    }
-		}
 	},
 	onInitializeForm: function(formid){
 		$(formid).closest('.ui-jqdialog').offset({ top: -1});
 		var button = $('<tr><td><button id="reset_password" class="CaptionField">Reset Password (1234)</button></td></tr>');
 		button.appendTo($.jset.fn.get_form_field(formid, 'group').closest('table'))
 		.on('click', function(){
-			var title = 'איפוס סיסמה';
-			var message = '<div dir="rtl">האם ברצונך לאפס את הסיסמה?</div>';	
+			var title = $.jset.messages.changePasswordTitle;
+			var message = '<div dir="ltr">' + $.jset.messages.changePasswordConfirm + '</div>';	
 			$.jset.fn.confirm(title, message, function(){
 				var params = {
 					_method_: 'reset_password',
@@ -78,7 +34,7 @@ $.jset.fn.registerGridDefinition('worker', {
 				};
 				
 				$.jset.fn.hub('jset/server/hub.php', params, function(data){
-					var message = (data == 0 || data == 1) ? '<div dir="rtl">סיסמה אופסה בהצלחה.</div>' : '<div dir="rtl">סיסמה לא אופסה.</div>';	
+					var message = (data == 0 || data == 1) ? '<div dir="ltr">' + $.jset.messages.changePasswordSuccess + '</div>' : '<div dir="ltr">' + $.jset.messages.changePasswordFailure + '</div>';	
 					$.jset.fn.alert(title, message);					
 				});
 			});
@@ -96,7 +52,7 @@ $.jset.fn.registerGridDefinition('worker', {
 		var message = obj.error.message;
 		switch(obj.error.info[1]){
 			case 1062: 
-				message = 'קיים כבר עובד עם שם משתמש זה.';
+				message = $.jset.messages.userExists;
 				break;
 			default:
 				;
